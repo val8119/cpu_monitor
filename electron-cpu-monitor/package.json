@@ -62,10 +62,10 @@
     }
   },
   "dependencies": {
-    "os-utils": "0.0.14"
+    "os-utils": "0.0.14",
+    "electron-squirrel-startup": "^1.0.0"
   },
   "devDependencies": {
-    "electron-squirrel-startup": "^1.0.0",
     "electron-builder": "^22.9.1",
     "@electron-forge/cli": "^6.0.0-beta.54",
     "@electron-forge/maker-deb": "^6.0.0-beta.54",

@@ -11,8 +11,8 @@ if (require("electron-squirrel-startup")) {
 const createWindow = () => {
    // Create the browser window.
    const mainWindow = new BrowserWindow({
-      width: 450,
-      height: 300,
+      width: 285,
+      height: 205,
       icon: __dirname + "/favicon.ico",
       webPreferences: {
          nodeIntegration: true,
@@ -23,6 +23,8 @@ const createWindow = () => {
    mainWindow.loadFile(path.join(__dirname, "index.html"));
 
    mainWindow.setResizable(false);
+
+   mainWindow.setAlwaysOnTop(true, "screen");
 
    mainWindow.removeMenu();
 

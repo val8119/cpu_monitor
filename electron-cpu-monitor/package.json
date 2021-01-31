@@ -1,15 +1,32 @@
 {
   "name": "electron-cpu-monitor",
-  "productName": "electron-cpu-monitor",
+  "productName": "CPU Monitor",
   "version": "1.0.0",
-  "description": "My Electron application description",
+  "description": "Monitor your CPU usage as well as RAM",
   "main": "src/index.js",
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
-    "lint": "echo \"No linting configured\""
+    "lint": "echo \"No linting configured\"",
+    "build-installer": "electron-builder"
+  },
+  "build": {
+    "appId": "electron-cpu-monitor",
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "src/favicon.ico"
+    },
+    "nsis": {
+      "installerIcon": "src/favicon.ico",
+      "uninstallerIcon": "src/favicon.ico",
+      "uninstallDisplayName": "CPU Monitor",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
   },
   "keywords": [],
   "author": {
@@ -45,10 +62,11 @@
     }
   },
   "dependencies": {
-    "electron-squirrel-startup": "^1.0.0",
     "os-utils": "0.0.14"
   },
   "devDependencies": {
+    "electron-squirrel-startup": "^1.0.0",
+    "electron-builder": "^22.9.1",
     "@electron-forge/cli": "^6.0.0-beta.54",
     "@electron-forge/maker-deb": "^6.0.0-beta.54",
     "@electron-forge/maker-rpm": "^6.0.0-beta.54",

@@ -1,17 +1,50 @@
 {
     "name": "cpu-monitor",
-    "version": "0.0.1",
+    "version": "1.0.0",
+    "description": "Monitor your CPU and RAM usage.",
     "main": "index.html",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "build -tasks win-x64 ."
+    },
+    "author": "val8119",
+    "license": "MIT",
+    "build": {
+        "appId": "cpu-monitor",
+        "nwVersion": "0.51.0",
+        "packed": true,
+        "targets": [
+            "zip",
+            "nsis7z"
+        ],
+        "strippedProperties": [
+            "build"
+        ],
+        "outputPattern": "${NAME} ${VERSION} ${PLATFORM}",
+        "win": {
+            "productName": "CPU Monitor",
+            "companyName": "val8119",
+            "copyright": "copyright",
+            "icon": "./icon.ico"
+        },
+        "nsis": {
+            "installDirectory": "$PROGRAMFILES\\${_COMPANYNAME}\\${_APPNAME}",
+            "diffUpdaters": true
+        }
+    },
+    "dependencies": {
+        "os-utils": "0.0.14"
+    },
+    "devDependencies": {
+        "nwjs-builder-phoenix": "^1.15.0"
+    },
     "window": {
-        "icon": "icon.png",
+        "icon": "./icon.png",
         "frame": false,
         "transparent": true,
         "resizeable": false,
         "position": "mouse",
         "width": 220,
         "height": 102
-    },
-    "dependencies": {
-        "os-utils": "0.0.14"
     }
 }

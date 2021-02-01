@@ -1,0 +1,116 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+html {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: rgb(42, 43, 49, 0);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: none;
+}
+
+main {
+    background: rgb(50, 51, 58);
+    border-radius: 6px;
+    width: 200px;
+    height: 102px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 16px;
+    margin-right: 16px;
+}
+
+.drag-area-1 {
+    height: 80px;
+    width: 200px;
+    position: absolute;
+    left: -5px;
+    top: 22px;
+    -webkit-app-region: drag;
+}
+
+.drag-area-2 {
+    height: 22px;
+    width: 130px;
+    position: absolute;
+    left: -5px;
+    -webkit-app-region: drag;
+}
+
+.min-close-btns {
+    width: 191px;
+    height: 43px;
+    position: relative;
+}
+
+button {
+    width: 13px;
+    height: 13px;
+    float: right;
+    outline: none;
+    border: none;
+    border-radius: 13px;
+    margin: 5px 2px 0px 7px;
+    transition: all ease 0.15s;
+}
+
+.min {
+    background: rgb(86, 144, 231);
+}
+
+.min:hover {
+    background: rgb(73, 123, 199);
+    cursor: pointer;
+}
+
+.close {
+    background: rgb(189, 38, 38);
+}
+
+.close:hover {
+    background: rgb(153, 30, 30);
+    cursor: pointer;
+}
+
+.pin {
+    background: rgb(255, 187, 0);
+}
+
+.pin:hover {
+    background: rgb(212, 158, 7);
+    cursor: pointer;
+}
+
+.p-cont {
+    width: 175px;
+    height: 150px;
+}
+
+p {
+    color: white;
+    font-size: 1.1em;
+    margin: 0px;
+    text-align: center;
+    display: inline;
+    font-weight: 400;
+}
+
+span {
+    color: white;
+    font-size: 1.1em;
+    margin: 0px;
+    float: right;
+    font-weight: 300;
+}

@@ -1,0 +1,17 @@
+{
+    "name": "cpu-monitor",
+    "version": "0.0.1",
+    "main": "index.html",
+    "window": {
+        "icon": "icon.png",
+        "frame": false,
+        "transparent": true,
+        "resizeable": false,
+        "position": "mouse",
+        "width": 220,
+        "height": 102
+    },
+    "dependencies": {
+        "os-utils": "0.0.14"
+    }
+}
